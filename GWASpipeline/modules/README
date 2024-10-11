@@ -1,0 +1,2 @@
+gemmaADD: https://github.com/genetics-statistics/GEMMA/releases/tag/v0.98.5
+gemmaREC: Manually adjusted version of GEMMA to test associations under the recessive model. Notice that the colum 'af' in this output is: 'frequency of homozygote' * 1/2. See changes made to the code here: https://github.com/popgenDK/GEMMAREC
