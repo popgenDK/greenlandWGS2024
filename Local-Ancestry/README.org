@@ -1,0 +1,10 @@
+#+title: Local ancestry analyses of Greenlandic population
+#+author: Zilong Li
+#+language: en
+
+The imputed and phased Greenlandic data were used in the analyses. Given the
+haplotype based admixture analyses, we identified 99 unadmixed Greenlandic
+Inuit. There, we infered the local ancestry for the admixed individuals using
+RFmix v2 with unadmixed Greenlandic Inuit (N=99) and unrelated Europeans (N=313,
+CEU, IBS, TSI) from the 1KG project as reference populations. The pipeline can
+be found in the [[file:z-rfmix.sh]] script.
