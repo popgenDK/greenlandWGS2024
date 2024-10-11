@@ -1,0 +1,23 @@
+#+title: Genotype imputation benchmarking
+#+author: Zilong Li
+#+language: en
+
+We benchmarked the imputation performance with respect to different reference
+panels. We used the Snakemake [[https://github.com/Zilong-Li/array-imputation-workflow/tree/8740eb6021566f0cc043ea95b4f7b4e1dff16be7][array-imputation-workflow]] for automated and
+reproducible analyses.
+
+* Imputation with only the 1000 Genome reference panels
+
+We used this configuration [[file:config_kgp_only.yaml]] and then run
+
+#+begin_src shell
+snakemake --configfile config_kgp_only.yaml --config scenario="imputation" -j4 -n
+#+end_src
+
+* Imputation with both the Greenlandic WGS panel and the 1000 Genome reference panels
+
+We used this configuration [[file:config_wgs_kgp.yaml]] and then run
+
+#+begin_src shell
+snakemake --configfile config_wgs_kgp.yaml --config scenario="imputation" -j4 -n
+#+end_src

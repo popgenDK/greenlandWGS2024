@@ -1,0 +1,30 @@
+
+# all, phasing, imputation, merge
+scenario: "all"
+
+# plink files
+# bed: prefix/path/to/plink.bed
+bed: data/chip/megaMergedPlus.autosomes.QCedHg38.nonoverlap.bed
+# bim: prefix/path/to/plink.bim
+bim: data/chip/megaMergedPlus.autosomes.QCedHg38.nonoverlap.bim
+# fam: prefix/path/to/plink.fam
+fam: data/chip/megaMergedPlus.autosomes.QCedHg38.nonoverlap.fam
+
+
+phasing:
+  input: "vcf"
+  shapeit2: "--duohmm -W 5"
+  refpanel1: "config/refpanel_kgp.tsv" # mandatory
+
+imputation:
+  shapeit2: "--duohmm -W 5"  # for chip prephasing
+  impute2: "-Ne 20000"
+  chunksize: 5000000
+
+ref1_first: false
+# programs path
+impute2: "impute2"
+shapeit2: "shapeit2"
+plink: "plink"    # plink1.9
+bcftools: "bcftools"
+dosage: "vcf_addDS"  # https://github.com/Zilong-Li/vcfpp/blob/main/tools/dosage.cpp
