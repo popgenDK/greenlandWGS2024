@@ -1,0 +1,10 @@
+genotypes: [PLINKPREFIX]
+phenotable: [TSV file with phenotypes]
+varsforgrm: [List of variant-ids to use for GRM calculation]
+goodvars: [List of variant-ids to use qq and manhatten plots]
+outdir: [OUTPUTDIR]
+nchunks: 8
+indvID: [Column name of individual IDs matching the IIDs in the plink.fam file]
+gwas:
+  - {name: PHENOTYPE_QT_ADD, phenotype: PHENOTYPE, transformation: QT, model: add, method: gemmaloco, covariates: [sex, age, cohort]}
+  - {name: PHENOTYPE_QT_REC, phenotype: PHENOTYPE, transformation: QT, model: rec, method: gemmaloco, covariates: [sex, age, cohort]}
