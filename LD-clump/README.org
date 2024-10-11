@@ -1,0 +1,18 @@
+#+title: Peak finding via LD-based clumping
+#+author: Zilong Li
+#+language: en
+
+To account for population structure in calculating LD, we used the adjusted LD
+method https://www.biorxiv.org/content/10.1101/2024.05.02.592187v1 for LD-based
+clumping, which is implemented in https://github.com/Zilong-Li/PCAone. We used
+PCAone v0.4.4 in our analyses while the most recent version is v0.4.7. More
+specifically, we run PCAone with =k=5= first to get the residuals matrix and then
+run LD clumping algorithms given different association inputs.
+
+The example pipeline is detailed in [[file:z-ld-clump.sh]], and can be run:
+
+#+begin_src shell
+bash z-ld-clump.sh rec  ## for association with reccesive model
+bash z-ld-clump.sh add  ## for association with additive model
+#+end_src
+
