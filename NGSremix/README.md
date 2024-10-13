@@ -1,4 +1,4 @@
-# NGSremox pipeline
+# NGSremix pipeline
 
 ## Dependencies
 
